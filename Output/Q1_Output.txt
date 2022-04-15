@@ -1,0 +1,450 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/27 00:22:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/27 00:22:15 INFO SparkContext: Running Spark version 3.0.1
+21/04/27 00:22:15 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/27 00:22:15 INFO ResourceUtils: ==============================================================
+21/04/27 00:22:15 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/27 00:22:15 INFO ResourceUtils: ==============================================================
+21/04/27 00:22:15 INFO SparkContext: Submitted application: Assignment_2 Question 1
+21/04/27 00:22:15 INFO SecurityManager: Changing view acls to: acp20cvs
+21/04/27 00:22:15 INFO SecurityManager: Changing modify acls to: acp20cvs
+21/04/27 00:22:15 INFO SecurityManager: Changing view acls groups to: 
+21/04/27 00:22:15 INFO SecurityManager: Changing modify acls groups to: 
+21/04/27 00:22:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp20cvs); groups with view permissions: Set(); users  with modify permissions: Set(acp20cvs); groups with modify permissions: Set()
+21/04/27 00:22:15 INFO Utils: Successfully started service 'sparkDriver' on port 45227.
+21/04/27 00:22:15 INFO SparkEnv: Registering MapOutputTracker
+21/04/27 00:22:15 INFO SparkEnv: Registering BlockManagerMaster
+21/04/27 00:22:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/27 00:22:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/27 00:22:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/27 00:22:15 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp20cvs/blockmgr-4bc51e5d-1abb-4787-9ce1-070b26cae4bd
+21/04/27 00:22:15 INFO MemoryStore: MemoryStore started with capacity 15.8 GiB
+21/04/27 00:22:15 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/27 00:22:15 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/04/27 00:22:15 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node175.shef.ac.uk:4040
+21/04/27 00:22:16 INFO Executor: Starting executor ID driver on host sharc-node175.shef.ac.uk
+21/04/27 00:22:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41578.
+21/04/27 00:22:16 INFO NettyBlockTransferService: Server created on sharc-node175.shef.ac.uk:41578
+21/04/27 00:22:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/27 00:22:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 41578, None)
+21/04/27 00:22:16 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node175.shef.ac.uk:41578 with 15.8 GiB RAM, BlockManagerId(driver, sharc-node175.shef.ac.uk, 41578, None)
+21/04/27 00:22:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 41578, None)
+21/04/27 00:22:16 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node175.shef.ac.uk, 41578, None)
+21/04/27 00:22:16 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse').
+21/04/27 00:22:16 INFO SharedState: Warehouse path is 'file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse'.
+21/04/27 00:25:32 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+root
+ |-- _c0: double (nullable = true)
+ |-- _c1: double (nullable = true)
+ |-- _c2: double (nullable = true)
+ |-- _c3: double (nullable = true)
+ |-- _c4: double (nullable = true)
+ |-- _c5: double (nullable = true)
+ |-- _c6: double (nullable = true)
+ |-- _c7: double (nullable = true)
+ |-- _c8: double (nullable = true)
+ |-- _c9: double (nullable = true)
+ |-- _c10: double (nullable = true)
+ |-- _c11: double (nullable = true)
+ |-- _c12: double (nullable = true)
+ |-- _c13: double (nullable = true)
+ |-- _c14: double (nullable = true)
+ |-- _c15: double (nullable = true)
+ |-- _c16: double (nullable = true)
+ |-- _c17: double (nullable = true)
+ |-- _c18: double (nullable = true)
+ |-- _c19: double (nullable = true)
+ |-- _c20: double (nullable = true)
+ |-- _c21: double (nullable = true)
+ |-- _c22: double (nullable = true)
+ |-- _c23: double (nullable = true)
+ |-- _c24: double (nullable = true)
+ |-- _c25: double (nullable = true)
+ |-- _c26: double (nullable = true)
+ |-- _c27: double (nullable = true)
+ |-- _c28: double (nullable = true)
+
+There are 77474 rows in the training set, and 33146 in the test set
+=======================RF_Sample===========================
+21/04/27 00:35:04 WARN DAGScheduler: Broadcasting large task binary with size 1177.7 KiB
+
+CV best model parameters:
+CV best model parameters:
+{
+    "bootstrap": true,
+    "cacheNodeIds": false,
+    "checkpointInterval": 10,
+    "featureSubsetStrategy": "all",
+    "featuresCol": "features",
+    "impurity": "gini",
+    "labelCol": "label",
+    "leafCol": "",
+    "maxBins": 20,
+    "maxDepth": 10,
+    "maxMemoryInMB": 256,
+    "minInfoGain": 0.0,
+    "minInstancesPerNode": 1,
+    "minWeightFractionPerNode": 0.0,
+    "numTrees": 100,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "seed": 200206552,
+    "subsamplingRate": 0.9
+}
+21/04/27 01:00:04 WARN DAGScheduler: Broadcasting large task binary with size 1109.0 KiB
+Accuracy for best rf model = 0.709407 
+21/04/27 01:00:04 WARN DAGScheduler: Broadcasting large task binary with size 1121.6 KiB
+21/04/27 01:00:06 WARN DAGScheduler: Broadcasting large task binary with size 1133.4 KiB
+Area under ROC for best rf model = 0.708318
+===========================================================
+=======================GB_Sample===========================
+21/04/27 01:00:12 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/27 01:00:12 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/04/27 01:24:57 WARN DAGScheduler: Broadcasting large task binary with size 1013.6 KiB
+
+CV best model parameters:
+{
+    "cacheNodeIds": false,
+    "checkpointInterval": 10,
+    "featureSubsetStrategy": "all",
+    "featuresCol": "features",
+    "impurity": "variance",
+    "labelCol": "label",
+    "leafCol": "",
+    "lossType": "logistic",
+    "maxBins": 32,
+    "maxDepth": 5,
+    "maxIter": 30,
+    "maxMemoryInMB": 256,
+    "minInfoGain": 0.0,
+    "minInstancesPerNode": 1,
+    "minWeightFractionPerNode": 0.0,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "seed": 200206552,
+    "stepSize": 0.1,
+    "subsamplingRate": 0.9,
+    "validationTol": 0.01
+}
+Accuracy for best gb model = 0.710312 
+Area under ROC for best gb model = 0.708999
+===========================================================
+=======================NN_Sample===========================
+21/04/27 05:39:32 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 05:42:25 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 05:45:20 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 06:18:57 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 06:21:48 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 06:24:38 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 06:58:02 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 07:01:02 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+21/04/27 07:04:01 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search failed
+
+CV best model parameters:
+{
+    "blockSize": 128,
+    "featuresCol": "features",
+    "labelCol": "label",
+    "maxIter": 100,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "seed": 200206552,
+    "solver": "l-bfgs",
+    "stepSize": 0.03,
+    "tol": 1e-06,
+    "layers": [
+        28,
+        20,
+        10,
+        2
+    ]
+}
+Accuracy for best gb model = 0.682013 
+Area under ROC for best gb model = 0.679708
+===========================================================
+There are 7699123 rows in the training set, and 3300877 in the test set
+=======================RF===========================
+21/04/27 07:17:02 WARN DAGScheduler: Broadcasting large task binary with size 1419.0 KiB
+Training time for Random Forest: 93.778
+Accuracy for RF model = 0.707724 
+Area under ROC for RF model = 0.706556
+===========================================================
+=======================GB===========================
+Training time for Gradient Boost: 162.482
+Accuracy for GB model = 0.710044 
+Area under ROC for GB model = 0.70882
+===========================================================
+=======================NN===========================
+Training time for Neural Network: 1126.47
+Accuracy for NN model= 0.681224 
+Area under ROC for NN model = 0.678763
+===========================================================
+===========================================================
+Three most relevant features from RF model:
+      feature  importance
+0   lepton_pT    0.024738
+1  lepton_eta    0.000126
+2  lepton_phi    0.000013
+===========================================================
+===========================================================
+Three most relevant features from GB model:
+      feature  importance
+0   lepton_pT    0.073762
+1  lepton_eta    0.000122
+2  lepton_phi    0.000000
+===========================================================
+
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/27 21:24:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/27 21:24:05 INFO SparkContext: Running Spark version 3.0.1
+21/04/27 21:24:05 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/27 21:24:05 INFO ResourceUtils: ==============================================================
+21/04/27 21:24:05 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/27 21:24:05 INFO ResourceUtils: ==============================================================
+21/04/27 21:24:05 INFO SparkContext: Submitted application: Assignment_2 Question 1
+21/04/27 21:24:05 INFO SecurityManager: Changing view acls to: acp20cvs
+21/04/27 21:24:05 INFO SecurityManager: Changing modify acls to: acp20cvs
+21/04/27 21:24:05 INFO SecurityManager: Changing view acls groups to: 
+21/04/27 21:24:05 INFO SecurityManager: Changing modify acls groups to: 
+21/04/27 21:24:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp20cvs); groups with view permissions: Set(); users  with modify permissions: Set(acp20cvs); groups with modify permissions: Set()
+21/04/27 21:24:05 INFO Utils: Successfully started service 'sparkDriver' on port 39583.
+21/04/27 21:24:05 INFO SparkEnv: Registering MapOutputTracker
+21/04/27 21:24:05 INFO SparkEnv: Registering BlockManagerMaster
+21/04/27 21:24:05 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/27 21:24:05 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/27 21:24:05 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/27 21:24:06 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp20cvs/blockmgr-ba58a38b-8596-4c0a-a239-bcc2f861ab17
+21/04/27 21:24:06 INFO MemoryStore: MemoryStore started with capacity 15.8 GiB
+21/04/27 21:24:06 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/27 21:24:06 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+21/04/27 21:24:06 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+21/04/27 21:24:06 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+21/04/27 21:24:06 WARN Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+21/04/27 21:24:06 INFO Utils: Successfully started service 'SparkUI' on port 4044.
+21/04/27 21:24:06 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node177.shef.ac.uk:4044
+21/04/27 21:24:06 INFO Executor: Starting executor ID driver on host sharc-node177.shef.ac.uk
+21/04/27 21:24:06 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41720.
+21/04/27 21:24:06 INFO NettyBlockTransferService: Server created on sharc-node177.shef.ac.uk:41720
+21/04/27 21:24:06 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/27 21:24:06 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node177.shef.ac.uk, 41720, None)
+21/04/27 21:24:06 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node177.shef.ac.uk:41720 with 15.8 GiB RAM, BlockManagerId(driver, sharc-node177.shef.ac.uk, 41720, None)
+21/04/27 21:24:06 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node177.shef.ac.uk, 41720, None)
+21/04/27 21:24:06 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node177.shef.ac.uk, 41720, None)
+21/04/27 21:24:07 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse').
+21/04/27 21:24:07 INFO SharedState: Warehouse path is 'file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse'.
+21/04/27 21:28:09 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+root
+ |-- _c0: double (nullable = true)
+ |-- _c1: double (nullable = true)
+ |-- _c2: double (nullable = true)
+ |-- _c3: double (nullable = true)
+ |-- _c4: double (nullable = true)
+ |-- _c5: double (nullable = true)
+ |-- _c6: double (nullable = true)
+ |-- _c7: double (nullable = true)
+ |-- _c8: double (nullable = true)
+ |-- _c9: double (nullable = true)
+ |-- _c10: double (nullable = true)
+ |-- _c11: double (nullable = true)
+ |-- _c12: double (nullable = true)
+ |-- _c13: double (nullable = true)
+ |-- _c14: double (nullable = true)
+ |-- _c15: double (nullable = true)
+ |-- _c16: double (nullable = true)
+ |-- _c17: double (nullable = true)
+ |-- _c18: double (nullable = true)
+ |-- _c19: double (nullable = true)
+ |-- _c20: double (nullable = true)
+ |-- _c21: double (nullable = true)
+ |-- _c22: double (nullable = true)
+ |-- _c23: double (nullable = true)
+ |-- _c24: double (nullable = true)
+ |-- _c25: double (nullable = true)
+ |-- _c26: double (nullable = true)
+ |-- _c27: double (nullable = true)
+ |-- _c28: double (nullable = true)
+
+Running the code for training times using 5 CORES and the data from parquests (sanity check) by commenting out the crossvalidation part
+There are 77474 rows in the training set, and 33146 in the test set
+=======================RF_Sample===========================
+===========================================================
+=======================GB_Sample===========================
+===========================================================
+=======================NN_Sample===========================
+===========================================================
+There are 7699123 rows in the training set, and 3300877 in the test set
+=======================RF===========================
+21/04/27 21:33:57 WARN DAGScheduler: Broadcasting large task binary with size 1715.3 KiB
+21/04/27 21:35:40 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+21/04/27 21:36:48 WARN DAGScheduler: Broadcasting large task binary with size 1142.4 KiB
+21/04/27 21:37:52 WARN DAGScheduler: Broadcasting large task binary with size 6.4 MiB
+21/04/27 21:40:58 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+Training time for Random Forest: 659.425
+21/04/27 21:41:15 WARN DAGScheduler: Broadcasting large task binary with size 3.9 MiB
+Accuracy for RF model = 0.708191
+21/04/27 21:41:32 WARN DAGScheduler: Broadcasting large task binary with size 3.9 MiB
+21/04/27 21:41:35 WARN DAGScheduler: Broadcasting large task binary with size 3.9 MiB
+21/04/27 21:42:01 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB 
+Area under ROC for RF model = 0.706905
+===========================================================
+=======================GB===========================
+Training time for Gradient Boost: 155.006
+21/04/27 21:46:26 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/27 21:46:26 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Accuracy for GB model = 0.710837 
+Area under ROC for GB model = 0.709736
+===========================================================
+=======================NN===========================
+Training time for Neural Network: 1047.19
+Accuracy for NN model= 0.684092 
+Area under ROC for NN model = 0.681968
+===========================================================
+
+Training time of all three models using 5 CORES: 1861.62
+===========================================================
+Three most relevant features from RF model:
+      feature  importance
+0   lepton_pT    0.025701
+1  lepton_eta    0.000114
+2  lepton_phi    0.000022
+===========================================================
+===========================================================
+Three most relevant features from GB model:
+      feature  importance
+0   lepton_pT    0.073242
+1  lepton_eta    0.001611
+2  lepton_phi    0.000000
+===========================================================
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/27 23:03:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/27 23:04:02 INFO SparkContext: Running Spark version 3.0.1
+21/04/27 23:04:02 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/27 23:04:02 INFO ResourceUtils: ==============================================================
+21/04/27 23:04:02 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/27 23:04:02 INFO ResourceUtils: ==============================================================
+21/04/27 23:04:02 INFO SparkContext: Submitted application: Assignment_2 Question 1
+21/04/27 23:04:02 INFO SecurityManager: Changing view acls to: acp20cvs
+21/04/27 23:04:02 INFO SecurityManager: Changing modify acls to: acp20cvs
+21/04/27 23:04:02 INFO SecurityManager: Changing view acls groups to: 
+21/04/27 23:04:02 INFO SecurityManager: Changing modify acls groups to: 
+21/04/27 23:04:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp20cvs); groups with view permissions: Set(); users  with modify permissions: Set(acp20cvs); groups with modify permissions: Set()
+21/04/27 23:04:02 INFO Utils: Successfully started service 'sparkDriver' on port 39762.
+21/04/27 23:04:02 INFO SparkEnv: Registering MapOutputTracker
+21/04/27 23:04:02 INFO SparkEnv: Registering BlockManagerMaster
+21/04/27 23:04:02 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/27 23:04:02 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/27 23:04:02 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/27 23:04:02 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp20cvs/blockmgr-661e605d-b764-4ccf-a79a-4763576e5f16
+21/04/27 23:04:02 INFO MemoryStore: MemoryStore started with capacity 15.8 GiB
+21/04/27 23:04:02 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/27 23:04:03 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/04/27 23:04:03 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node173.shef.ac.uk:4040
+21/04/27 23:04:03 INFO Executor: Starting executor ID driver on host sharc-node173.shef.ac.uk
+21/04/27 23:04:03 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42802.
+21/04/27 23:04:03 INFO NettyBlockTransferService: Server created on sharc-node173.shef.ac.uk:42802
+21/04/27 23:04:03 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/27 23:04:03 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node173.shef.ac.uk, 42802, None)
+21/04/27 23:04:03 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node173.shef.ac.uk:42802 with 15.8 GiB RAM, BlockManagerId(driver, sharc-node173.shef.ac.uk, 42802, None)
+21/04/27 23:04:03 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node173.shef.ac.uk, 42802, None)
+21/04/27 23:04:03 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node173.shef.ac.uk, 42802, None)
+21/04/27 23:04:04 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse').
+21/04/27 23:04:04 INFO SharedState: Warehouse path is 'file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse'.
+21/04/27 23:07:26 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+root
+ |-- _c0: double (nullable = true)
+ |-- _c1: double (nullable = true)
+ |-- _c2: double (nullable = true)
+ |-- _c3: double (nullable = true)
+ |-- _c4: double (nullable = true)
+ |-- _c5: double (nullable = true)
+ |-- _c6: double (nullable = true)
+ |-- _c7: double (nullable = true)
+ |-- _c8: double (nullable = true)
+ |-- _c9: double (nullable = true)
+ |-- _c10: double (nullable = true)
+ |-- _c11: double (nullable = true)
+ |-- _c12: double (nullable = true)
+ |-- _c13: double (nullable = true)
+ |-- _c14: double (nullable = true)
+ |-- _c15: double (nullable = true)
+ |-- _c16: double (nullable = true)
+ |-- _c17: double (nullable = true)
+ |-- _c18: double (nullable = true)
+ |-- _c19: double (nullable = true)
+ |-- _c20: double (nullable = true)
+ |-- _c21: double (nullable = true)
+ |-- _c22: double (nullable = true)
+ |-- _c23: double (nullable = true)
+ |-- _c24: double (nullable = true)
+ |-- _c25: double (nullable = true)
+ |-- _c26: double (nullable = true)
+ |-- _c27: double (nullable = true)
+ |-- _c28: double (nullable = true)
+
+Running the code for training times using 10 CORES and the data from parquests (sanity check) by commenting out the crossvalidation part
+There are 77474 rows in the training set, and 33146 in the test set
+=======================RF_Sample===========================
+===========================================================
+=======================GB_Sample===========================
+===========================================================
+=======================NN_Sample===========================
+===========================================================
+There are 7699123 rows in the training set, and 3300877 in the test set
+=======================RF===========================
+21/04/27 23:12:26 WARN DAGScheduler: Broadcasting large task binary with size 1671.6 KiB
+21/04/27 23:14:45 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+21/04/27 23:15:50 WARN DAGScheduler: Broadcasting large task binary with size 1143.7 KiB
+21/04/27 23:17:52 WARN DAGScheduler: Broadcasting large task binary with size 6.4 MiB
+21/04/27 23:19:25 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+21/04/27 23:20:38 WARN DAGScheduler: Broadcasting large task binary with size 8.7 MiB
+21/04/27 23:21:04 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+21/04/27 23:21:07 WARN DAGScheduler: Broadcasting large task binary with size 4.3 MiB
+21/04/27 23:23:17 WARN DAGScheduler: Broadcasting large task binary with size 1494.6 KiB
+Training time for Random Forest: 631.26
+21/04/27 23:23:19 WARN DAGScheduler: Broadcasting large task binary with size 7.9 MiB
+Accuracy for RF model = 0.708469 
+21/04/27 23:23:52 WARN DAGScheduler: Broadcasting large task binary with size 7.9 MiB
+21/04/27 23:23:54 WARN DAGScheduler: Broadcasting large task binary with size 7.9 MiB
+21/04/27 23:23:55 WARN DAGScheduler: Broadcasting large task binary with size 7.9 MiB
+Area under ROC for RF model = 0.707137
+===========================================================
+=======================GB===========================
+Training time for Gradient Boost: 147.442
+21/04/27 23:26:24 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/27 23:26:24 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Accuracy for GB model = 0.710044 
+Area under ROC for GB model = 0.70882
+===========================================================
+=======================NN===========================
+Training time for Neural Network: 983.15
+Accuracy for NN model= 0.684717 
+Area under ROC for NN model = 0.68253
+===========================================================
+
+Training time of all three models using 10 CORES: 1761.85
+===========================================================
+Three most relevant features from RF model:
+      feature  importance
+0   lepton_pT    0.024738
+1  lepton_eta    0.000126
+2  lepton_phi    0.000013
+===========================================================
+===========================================================
+Three most relevant features from GB model:
+      feature  importance
+0   lepton_pT    0.073762
+1  lepton_eta    0.000122
+2  lepton_phi    0.000000
+===========================================================

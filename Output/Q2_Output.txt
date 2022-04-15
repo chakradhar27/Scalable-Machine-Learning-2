@@ -1,0 +1,534 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/29 11:24:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/29 11:24:22 INFO SparkContext: Running Spark version 3.0.1
+21/04/29 11:24:22 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/29 11:24:22 INFO ResourceUtils: ==============================================================
+21/04/29 11:24:22 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/29 11:24:22 INFO ResourceUtils: ==============================================================
+21/04/29 11:24:22 INFO SparkContext: Submitted application: Assignment_2 Question 2
+21/04/29 11:24:22 INFO SecurityManager: Changing view acls to: acp20cvs
+21/04/29 11:24:22 INFO SecurityManager: Changing modify acls to: acp20cvs
+21/04/29 11:24:22 INFO SecurityManager: Changing view acls groups to: 
+21/04/29 11:24:22 INFO SecurityManager: Changing modify acls groups to: 
+21/04/29 11:24:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp20cvs); groups with view permissions: Set(); users  with modify permissions: Set(acp20cvs); groups with modify permissions: Set()
+21/04/29 11:24:23 INFO Utils: Successfully started service 'sparkDriver' on port 37961.
+21/04/29 11:24:23 INFO SparkEnv: Registering MapOutputTracker
+21/04/29 11:24:23 INFO SparkEnv: Registering BlockManagerMaster
+21/04/29 11:24:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/29 11:24:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/29 11:24:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/29 11:24:23 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp20cvs/blockmgr-c5f24e4b-2595-4990-a620-7484810f1ae5
+21/04/29 11:24:23 INFO MemoryStore: MemoryStore started with capacity 15.8 GiB
+21/04/29 11:24:23 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/29 11:24:23 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/04/29 11:24:23 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node176.shef.ac.uk:4040
+21/04/29 11:24:23 INFO Executor: Starting executor ID driver on host sharc-node176.shef.ac.uk
+21/04/29 11:24:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44122.
+21/04/29 11:24:23 INFO NettyBlockTransferService: Server created on sharc-node176.shef.ac.uk:44122
+21/04/29 11:24:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/29 11:24:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node176.shef.ac.uk, 44122, None)
+21/04/29 11:24:23 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node176.shef.ac.uk:44122 with 15.8 GiB RAM, BlockManagerId(driver, sharc-node176.shef.ac.uk, 44122, None)
+21/04/29 11:24:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node176.shef.ac.uk, 44122, None)
+21/04/29 11:24:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node176.shef.ac.uk, 44122, None)
+21/04/29 11:24:24 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse').
+21/04/29 11:24:24 INFO SharedState: Warehouse path is 'file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse'.
+21/04/29 11:24:41 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel|Cat1|Cat2|Cat3|Cat4|Cat5|Cat6|Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |Var8      |NVCat|NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+|1     |1           |3      |2005         |2005      |K         |K.78       |K.78.2        |D   |C   |F   |?   |?   |C   |?   |C   |A   |B    |F    |D    |4     |1.2705325 |0.9994181 |0.5881536 |0.9083511 |1.0089121 |0.2610397 |0.9077934 |-0.077998 |M    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|2     |2           |2      |2005         |2003      |Q         |Q.22       |Q.22.3        |B   |C   |A   |A   |A   |E   |C   |A   |B   |A    |B    |D    |5     |0.2179505 |0.5671395 |1.4212056 |0.4855086 |1.2408507 |0.4329871 |-0.7264591|0.2047848 |O    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|3     |3           |1      |2005         |1998      |AR        |AR.41      |AR.41.1       |B   |?   |A   |A   |A   |C   |C   |A   |B   |A    |E    |D    |2     |-0.7542818|-1.6461267|-1.1010908|-1.6794449|-0.9714867|-1.4057974|-0.8370476|-1.1768577|F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|4     |3           |1      |2006         |1998      |AR        |AR.41      |AR.41.1       |B   |?   |A   |A   |A   |C   |C   |A   |B   |B    |B    |B    |2     |-0.7542818|-1.6461267|-1.1010908|-1.6794449|-0.9714867|-1.4057974|-0.8370476|-1.1768577|F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|5     |3           |2      |2005         |2001      |D         |D.20       |D.20.0        |J   |C   |B   |?   |?   |D   |?   |A   |B   |A    |B    |B    |5     |0.5634545 |1.8639752 |1.8145913 |1.8386046 |0.8126563 |2.1126909 |1.5344617 |2.3472605 |F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+only showing top 5 rows
+
+root
+ |-- Row_ID: integer (nullable = true)
+ |-- Household_ID: integer (nullable = true)
+ |-- Vehicle: integer (nullable = true)
+ |-- Calendar_Year: integer (nullable = true)
+ |-- Model_Year: integer (nullable = true)
+ |-- Blind_Make: string (nullable = true)
+ |-- Blind_Model: string (nullable = true)
+ |-- Blind_Submodel: string (nullable = true)
+ |-- Cat1: string (nullable = true)
+ |-- Cat2: string (nullable = true)
+ |-- Cat3: string (nullable = true)
+ |-- Cat4: string (nullable = true)
+ |-- Cat5: string (nullable = true)
+ |-- Cat6: string (nullable = true)
+ |-- Cat7: string (nullable = true)
+ |-- Cat8: string (nullable = true)
+ |-- Cat9: string (nullable = true)
+ |-- Cat10: string (nullable = true)
+ |-- Cat11: string (nullable = true)
+ |-- Cat12: string (nullable = true)
+ |-- OrdCat: string (nullable = true)
+ |-- Var1: double (nullable = true)
+ |-- Var2: double (nullable = true)
+ |-- Var3: double (nullable = true)
+ |-- Var4: double (nullable = true)
+ |-- Var5: double (nullable = true)
+ |-- Var6: double (nullable = true)
+ |-- Var7: double (nullable = true)
+ |-- Var8: double (nullable = true)
+ |-- NVCat: string (nullable = true)
+ |-- NVVar1: double (nullable = true)
+ |-- NVVar2: double (nullable = true)
+ |-- NVVar3: double (nullable = true)
+ |-- NVVar4: double (nullable = true)
+ |-- Claim_Amount: double (nullable = true)
+
+(13184290, 35)
+
+==========================PP================================
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel|Cat1|Cat2|Cat3|Cat4|Cat5|Cat6|Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1|Var2|Var3|Var4|Var5|Var6|Var7|Var8|NVCat|NVVar1|NVVar2|NVVar3|NVVar4|Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|     0|           0|      0|            0|         0|         0|          0|             0|   0|   0|   0|   0|   0|   0|   0|   0|   0|    0|    0|28882|     0|   0|   0|   0|   0|   0|   0|   0|   0|    0|     0|     0|     0|     0|           0|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel| Cat1|   Cat2|Cat3|   Cat4|   Cat5| Cat6|   Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1|Var2|Var3|Var4|Var5|Var6|Var7|Var8|NVCat|NVVar1|NVVar2|NVVar3|NVVar4|Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|     0|           0|      0|            0|         0|      8431|       8431|          8431|25981|4874164|3999|5631649|5637321|25981|7167634|3364|   0| 3917|31469|28882|  7546|   0|   0|   0|   0|   0|   0|   0|   0|    0|     0|     0|     0|     0|           0|
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+
+root
+ |-- Calendar_Year: string (nullable = true)
+ |-- Model_Year: string (nullable = true)
+ |-- Cat3: string (nullable = true)
+ |-- Cat8: string (nullable = true)
+ |-- Cat9: string (nullable = true)
+ |-- Cat10: string (nullable = true)
+ |-- Var1: double (nullable = true)
+ |-- Var2: double (nullable = true)
+ |-- Var3: double (nullable = true)
+ |-- Var4: double (nullable = true)
+ |-- Var5: double (nullable = true)
+ |-- Var6: double (nullable = true)
+ |-- Var7: double (nullable = true)
+ |-- NVVar1: double (nullable = true)
+ |-- NVVar2: double (nullable = true)
+ |-- NVVar3: double (nullable = true)
+ |-- NVVar4: double (nullable = true)
+ |-- Claim_Amount: double (nullable = true)
+
+(13173031, 18)
+============================================================
+
+=============================LR=============================
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|Calendar_Year|Model_Year|Cat3|Cat8|Cat9|Cat10|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|claim|
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|2005         |1981      |C   |A   |B   |A    |-0.1114836|-1.5769622|-1.2862134|-1.6117902|-0.2935124|-0.7039712|0.3917136 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |-0.1114836|-1.5769622|-1.2862134|-1.6117902|-0.2935124|-0.7039712|0.3917136 |3.1977899 |-0.2661168|-0.2723372|3.068692  |0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |-0.0954137|-1.5423799|-2.0035639|-1.5779628|-0.2459352|-1.0899756|-0.1858042|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |0.4429298 |-1.0755191|1.7451704 |-1.1212928|0.0633162 |-0.1857896|0.8709306 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1982      |C   |A   |B   |A    |-0.5855473|-0.9890633|1.1898023 |-1.0367243|-0.8049667|0.6926628 |1.3501475 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+only showing top 5 rows
+
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|Calendar_Year|Model_Year|Cat3|Cat8|Cat9|Cat10|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|claim|
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|2005         |1981      |C   |A   |B   |A    |-0.5212675|-1.7152913|-0.2448984|-1.6456175|0.3190434 |-0.7507596|-1.1933885|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |B    |0.386685  |-0.9890633|1.1898023 |-1.0367243|-0.1983581|-0.2150323|0.9077934 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|23.42057    |1.0  |
+|2005         |1982      |C   |A   |B   |A    |0.764329  |-0.9026076|0.7732763 |-0.9521559|1.7760936 |0.4177809 |-0.8739105|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1982      |C   |A   |B   |B    |0.4429298 |-0.7296962|1.7451704 |-0.5293134|0.0633162 |-0.1378315|0.8709306 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|185.0761    |1.0  |
+|2005         |1983      |C   |A   |B   |A    |-0.2962881|-1.3348862|-1.7027395|-1.3749983|-0.7692839|-1.3379542|-0.4069812|-0.2315299|-0.2661168|-0.2723372|3.068692  |0.0         |0.0  |
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+only showing top 5 rows
+
+Train Data non-zero claims percentage: 0.399746
+Train Data zero claims percentage: 0.600254
+Test Data non-zero claims percentage: 0.398842
+Test Data zero claims percentage: 0.601158
+21/04/29 11:26:00 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/29 11:26:00 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/04/29 11:26:00 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+21/04/29 11:26:00 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+Training time for Linear Regression: 3.078
+Mean square error = 75437.52559164097
+Mean absolute error = 115.4236847714715
+============================================================
+=============================TDM=============================
+21/04/29 11:33:06 WARN DAGScheduler: Broadcasting large task binary with size 1008.4 KiB
+21/04/29 11:33:06 WARN DAGScheduler: Broadcasting large task binary with size 1037.3 KiB
+21/04/29 11:33:06 WARN DAGScheduler: Broadcasting large task binary with size 1082.4 KiB
+21/04/29 11:33:06 WARN DAGScheduler: Broadcasting large task binary with size 1083.2 KiB
+21/04/29 12:01:21 WARN DAGScheduler: Broadcasting large task binary with size 1001.4 
+
+CV best model parameters:
+{
+    "cacheNodeIds": false,
+    "checkpointInterval": 10,
+    "featureSubsetStrategy": "all",
+    "featuresCol": "features",
+    "impurity": "variance",
+    "labelCol": "claim",
+    "leafCol": "",
+    "lossType": "logistic",
+    "maxBins": 32,
+    "maxDepth": 5,
+    "maxIter": 20,
+    "maxMemoryInMB": 256,
+    "minInfoGain": 0.0,
+    "minInstancesPerNode": 1,
+    "minWeightFractionPerNode": 0.0,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "seed": 200206552,
+    "stepSize": 0.1,
+    "subsamplingRate": 1.0,
+    "validationTol": 0.01
+}
+Training time for Gradient Boost: 10.895
+Accuracy for GB classifier model = 0.615105 
+
+Training time for GLM - Gamma: 1.725
+Mean square error = 90008.05196748937
+Mean absolute error = 204.29187819212243
+============================================================
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/29 14:54:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/29 14:54:19 INFO SparkContext: Running Spark version 3.0.1
+21/04/29 14:54:19 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/29 14:54:19 INFO ResourceUtils: ==============================================================
+21/04/29 14:54:19 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/29 14:54:19 INFO ResourceUtils: ==============================================================
+21/04/29 14:54:19 INFO SparkContext: Submitted application: Assignment_2 Question 2
+21/04/29 14:54:19 INFO SecurityManager: Changing view acls to: acp20cvs
+21/04/29 14:54:19 INFO SecurityManager: Changing modify acls to: acp20cvs
+21/04/29 14:54:19 INFO SecurityManager: Changing view acls groups to: 
+21/04/29 14:54:19 INFO SecurityManager: Changing modify acls groups to: 
+21/04/29 14:54:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp20cvs); groups with view permissions: Set(); users  with modify permissions: Set(acp20cvs); groups with modify permissions: Set()
+21/04/29 14:54:19 INFO Utils: Successfully started service 'sparkDriver' on port 41368.
+21/04/29 14:54:19 INFO SparkEnv: Registering MapOutputTracker
+21/04/29 14:54:19 INFO SparkEnv: Registering BlockManagerMaster
+21/04/29 14:54:19 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/29 14:54:19 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/29 14:54:19 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/29 14:54:19 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp20cvs/blockmgr-bca80086-5fbf-4be2-aa3c-ee53bca48020
+21/04/29 14:54:19 INFO MemoryStore: MemoryStore started with capacity 15.8 GiB
+21/04/29 14:54:19 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/29 14:54:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/04/29 14:54:20 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node175.shef.ac.uk:4040
+21/04/29 14:54:20 INFO Executor: Starting executor ID driver on host sharc-node175.shef.ac.uk
+21/04/29 14:54:20 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40176.
+21/04/29 14:54:20 INFO NettyBlockTransferService: Server created on sharc-node175.shef.ac.uk:40176
+21/04/29 14:54:20 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/29 14:54:20 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 40176, None)
+21/04/29 14:54:20 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node175.shef.ac.uk:40176 with 15.8 GiB RAM, BlockManagerId(driver, sharc-node175.shef.ac.uk, 40176, None)
+21/04/29 14:54:20 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 40176, None)
+21/04/29 14:54:20 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node175.shef.ac.uk, 40176, None)
+21/04/29 14:54:20 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse').
+21/04/29 14:54:20 INFO SharedState: Warehouse path is 'file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse'.
+Running the code for training times using 5 CORES and the data from parquests
+21/04/29 14:55:10 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel|Cat1|Cat2|Cat3|Cat4|Cat5|Cat6|Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |Var8      |NVCat|NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+|1     |1           |3      |2005         |2005      |K         |K.78       |K.78.2        |D   |C   |F   |?   |?   |C   |?   |C   |A   |B    |F    |D    |4     |1.2705325 |0.9994181 |0.5881536 |0.9083511 |1.0089121 |0.2610397 |0.9077934 |-0.077998 |M    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|2     |2           |2      |2005         |2003      |Q         |Q.22       |Q.22.3        |B   |C   |A   |A   |A   |E   |C   |A   |B   |A    |B    |D    |5     |0.2179505 |0.5671395 |1.4212056 |0.4855086 |1.2408507 |0.4329871 |-0.7264591|0.2047848 |O    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|3     |3           |1      |2005         |1998      |AR        |AR.41      |AR.41.1       |B   |?   |A   |A   |A   |C   |C   |A   |B   |A    |E    |D    |2     |-0.7542818|-1.6461267|-1.1010908|-1.6794449|-0.9714867|-1.4057974|-0.8370476|-1.1768577|F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|4     |3           |1      |2006         |1998      |AR        |AR.41      |AR.41.1       |B   |?   |A   |A   |A   |C   |C   |A   |B   |B    |B    |B    |2     |-0.7542818|-1.6461267|-1.1010908|-1.6794449|-0.9714867|-1.4057974|-0.8370476|-1.1768577|F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|5     |3           |2      |2005         |2001      |D         |D.20       |D.20.0        |J   |C   |B   |?   |?   |D   |?   |A   |B   |A    |B    |B    |5     |0.5634545 |1.8639752 |1.8145913 |1.8386046 |0.8126563 |2.1126909 |1.5344617 |2.3472605 |F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+only showing top 5 rows
+
+root
+ |-- Row_ID: integer (nullable = true)
+ |-- Household_ID: integer (nullable = true)
+ |-- Vehicle: integer (nullable = true)
+ |-- Calendar_Year: integer (nullable = true)
+ |-- Model_Year: integer (nullable = true)
+ |-- Blind_Make: string (nullable = true)
+ |-- Blind_Model: string (nullable = true)
+ |-- Blind_Submodel: string (nullable = true)
+ |-- Cat1: string (nullable = true)
+ |-- Cat2: string (nullable = true)
+ |-- Cat3: string (nullable = true)
+ |-- Cat4: string (nullable = true)
+ |-- Cat5: string (nullable = true)
+ |-- Cat6: string (nullable = true)
+ |-- Cat7: string (nullable = true)
+ |-- Cat8: string (nullable = true)
+ |-- Cat9: string (nullable = true)
+ |-- Cat10: string (nullable = true)
+ |-- Cat11: string (nullable = true)
+ |-- Cat12: string (nullable = true)
+ |-- OrdCat: string (nullable = true)
+ |-- Var1: double (nullable = true)
+ |-- Var2: double (nullable = true)
+ |-- Var3: double (nullable = true)
+ |-- Var4: double (nullable = true)
+ |-- Var5: double (nullable = true)
+ |-- Var6: double (nullable = true)
+ |-- Var7: double (nullable = true)
+ |-- Var8: double (nullable = true)
+ |-- NVCat: string (nullable = true)
+ |-- NVVar1: double (nullable = true)
+ |-- NVVar2: double (nullable = true)
+ |-- NVVar3: double (nullable = true)
+ |-- NVVar4: double (nullable = true)
+ |-- Claim_Amount: double (nullable = true)
+
+(13184290, 35)
+
+==========================PP================================
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel|Cat1|Cat2|Cat3|Cat4|Cat5|Cat6|Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1|Var2|Var3|Var4|Var5|Var6|Var7|Var8|NVCat|NVVar1|NVVar2|NVVar3|NVVar4|Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|     0|           0|      0|            0|         0|         0|          0|             0|   0|   0|   0|   0|   0|   0|   0|   0|   0|    0|    0|28882|     0|   0|   0|   0|   0|   0|   0|   0|   0|    0|     0|     0|     0|     0|           0|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel| Cat1|   Cat2|Cat3|   Cat4|   Cat5| Cat6|   Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1|Var2|Var3|Var4|Var5|Var6|Var7|Var8|NVCat|NVVar1|NVVar2|NVVar3|NVVar4|Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|     0|           0|      0|            0|         0|      8431|       8431|          8431|25981|4874164|3999|5631649|5637321|25981|7167634|3364|   0| 3917|31469|28882|  7546|   0|   0|   0|   0|   0|   0|   0|   0|    0|     0|     0|     0|     0|           0|
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+
+root
+ |-- Calendar_Year: string (nullable = true)
+ |-- Model_Year: string (nullable = true)
+ |-- Cat3: string (nullable = true)
+ |-- Cat8: string (nullable = true)
+ |-- Cat9: string (nullable = true)
+ |-- Cat10: string (nullable = true)
+ |-- Var1: double (nullable = true)
+ |-- Var2: double (nullable = true)
+ |-- Var3: double (nullable = true)
+ |-- Var4: double (nullable = true)
+ |-- Var5: double (nullable = true)
+ |-- Var6: double (nullable = true)
+ |-- Var7: double (nullable = true)
+ |-- NVVar1: double (nullable = true)
+ |-- NVVar2: double (nullable = true)
+ |-- NVVar3: double (nullable = true)
+ |-- NVVar4: double (nullable = true)
+ |-- Claim_Amount: double (nullable = true)
+
+(13173031, 18)
+============================================================
+
+=============================LR=============================
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|Calendar_Year|Model_Year|Cat3|Cat8|Cat9|Cat10|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|claim|
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|2005         |1981      |C   |A   |B   |A    |-0.1114836|-1.5769622|-1.2862134|-1.6117902|-0.2935124|-0.7039712|0.3917136 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |-0.1114836|-1.5769622|-1.2862134|-1.6117902|-0.2935124|-0.7039712|0.3917136 |3.1977899 |-0.2661168|-0.2723372|3.068692  |0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |-0.0954137|-1.5423799|-2.0035639|-1.5779628|-0.2459352|-1.0899756|-0.1858042|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |0.4429298 |-1.0755191|1.7451704 |-1.1212928|0.0633162 |-0.1857896|0.8709306 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1982      |C   |A   |B   |A    |-0.5855473|-0.9890633|1.1898023 |-1.0367243|-0.8049667|0.6926628 |1.3501475 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+only showing top 5 rows
+
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|Calendar_Year|Model_Year|Cat3|Cat8|Cat9|Cat10|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|claim|
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|2005         |1981      |C   |A   |B   |A    |-0.5212675|-1.7152913|-0.2448984|-1.6456175|0.3190434 |-0.7507596|-1.1933885|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |B    |0.386685  |-0.9890633|1.1898023 |-1.0367243|-0.1983581|-0.2150323|0.9077934 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|23.42057    |1.0  |
+|2005         |1982      |C   |A   |B   |A    |0.764329  |-0.9026076|0.7732763 |-0.9521559|1.7760936 |0.4177809 |-0.8739105|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1982      |C   |A   |B   |B    |0.4429298 |-0.7296962|1.7451704 |-0.5293134|0.0633162 |-0.1378315|0.8709306 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|185.0761    |1.0  |
+|2005         |1983      |C   |A   |B   |A    |-0.2962881|-1.3348862|-1.7027395|-1.3749983|-0.7692839|-1.3379542|-0.4069812|-0.2315299|-0.2661168|-0.2723372|3.068692  |0.0         |0.0  |
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+only showing top 5 rows
+
+Train Data non-zero claims percentage: 0.399746
+Train Data zero claims percentage: 0.600254
+Test Data non-zero claims percentage: 0.398842
+Test Data zero claims percentage: 0.601158
+21/04/29 14:56:41 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/29 14:56:41 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/04/29 14:56:41 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+21/04/29 14:56:41 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+Training time for Linear Regression: 3.401
+Mean square error = 75437.52559164097
+Mean absolute error = 115.4236847714715
+============================================================
+=============================TDM=============================
+Training time for Gradient Boost: 14.86
+Accuracy for GB classifier model = 0.615105 
+
+Training time for GLM - Gamma: 1.939
+Mean square error = 90008.0519674893
+Mean absolute error = 204.2918781921221
+============================================================
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/29 19:11:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/29 19:12:00 INFO SparkContext: Running Spark version 3.0.1
+21/04/29 19:12:00 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/29 19:12:00 INFO ResourceUtils: ==============================================================
+21/04/29 19:12:00 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/29 19:12:00 INFO ResourceUtils: ==============================================================
+21/04/29 19:12:00 INFO SparkContext: Submitted application: Assignment_2 Question 2
+21/04/29 19:12:00 INFO SecurityManager: Changing view acls to: acp20cvs
+21/04/29 19:12:00 INFO SecurityManager: Changing modify acls to: acp20cvs
+21/04/29 19:12:00 INFO SecurityManager: Changing view acls groups to: 
+21/04/29 19:12:00 INFO SecurityManager: Changing modify acls groups to: 
+21/04/29 19:12:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp20cvs); groups with view permissions: Set(); users  with modify permissions: Set(acp20cvs); groups with modify permissions: Set()
+21/04/29 19:12:00 INFO Utils: Successfully started service 'sparkDriver' on port 33386.
+21/04/29 19:12:00 INFO SparkEnv: Registering MapOutputTracker
+21/04/29 19:12:00 INFO SparkEnv: Registering BlockManagerMaster
+21/04/29 19:12:00 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/29 19:12:00 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/29 19:12:00 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/29 19:12:00 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp20cvs/blockmgr-7644c856-a60b-4ead-bf67-c570189ecade
+21/04/29 19:12:00 INFO MemoryStore: MemoryStore started with capacity 15.8 GiB
+21/04/29 19:12:00 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/29 19:12:00 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/04/29 19:12:00 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node175.shef.ac.uk:4040
+21/04/29 19:12:01 INFO Executor: Starting executor ID driver on host sharc-node175.shef.ac.uk
+21/04/29 19:12:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44554.
+21/04/29 19:12:01 INFO NettyBlockTransferService: Server created on sharc-node175.shef.ac.uk:44554
+21/04/29 19:12:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/29 19:12:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 44554, None)
+21/04/29 19:12:01 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node175.shef.ac.uk:44554 with 15.8 GiB RAM, BlockManagerId(driver, sharc-node175.shef.ac.uk, 44554, None)
+21/04/29 19:12:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 44554, None)
+21/04/29 19:12:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node175.shef.ac.uk, 44554, None)
+21/04/29 19:12:01 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse').
+21/04/29 19:12:01 INFO SharedState: Warehouse path is 'file:/home/acp20cvs/com6012/ScalableML/HPC/spark-warehouse'.
+Running the code for training times using 10 CORES and the data from parquests
+21/04/29 19:12:13 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel|Cat1|Cat2|Cat3|Cat4|Cat5|Cat6|Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |Var8      |NVCat|NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+|1     |1           |3      |2005         |2005      |K         |K.78       |K.78.2        |D   |C   |F   |?   |?   |C   |?   |C   |A   |B    |F    |D    |4     |1.2705325 |0.9994181 |0.5881536 |0.9083511 |1.0089121 |0.2610397 |0.9077934 |-0.077998 |M    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|2     |2           |2      |2005         |2003      |Q         |Q.22       |Q.22.3        |B   |C   |A   |A   |A   |E   |C   |A   |B   |A    |B    |D    |5     |0.2179505 |0.5671395 |1.4212056 |0.4855086 |1.2408507 |0.4329871 |-0.7264591|0.2047848 |O    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|3     |3           |1      |2005         |1998      |AR        |AR.41      |AR.41.1       |B   |?   |A   |A   |A   |C   |C   |A   |B   |A    |E    |D    |2     |-0.7542818|-1.6461267|-1.1010908|-1.6794449|-0.9714867|-1.4057974|-0.8370476|-1.1768577|F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|4     |3           |1      |2006         |1998      |AR        |AR.41      |AR.41.1       |B   |?   |A   |A   |A   |C   |C   |A   |B   |B    |B    |B    |2     |-0.7542818|-1.6461267|-1.1010908|-1.6794449|-0.9714867|-1.4057974|-0.8370476|-1.1768577|F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
+|5     |3           |2      |2005         |2001      |D         |D.20       |D.20.0        |J   |C   |B   |?   |?   |D   |?   |A   |B   |A    |B    |B    |5     |0.5634545 |1.8639752 |1.8145913 |1.8386046 |0.8126563 |2.1126909 |1.5344617 |2.3472605 |F    |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----------+----------+----------+----------+----------+----------+----------+----------+-----+----------+----------+----------+----------+------------+
+only showing top 5 rows
+
+root
+ |-- Row_ID: integer (nullable = true)
+ |-- Household_ID: integer (nullable = true)
+ |-- Vehicle: integer (nullable = true)
+ |-- Calendar_Year: integer (nullable = true)
+ |-- Model_Year: integer (nullable = true)
+ |-- Blind_Make: string (nullable = true)
+ |-- Blind_Model: string (nullable = true)
+ |-- Blind_Submodel: string (nullable = true)
+ |-- Cat1: string (nullable = true)
+ |-- Cat2: string (nullable = true)
+ |-- Cat3: string (nullable = true)
+ |-- Cat4: string (nullable = true)
+ |-- Cat5: string (nullable = true)
+ |-- Cat6: string (nullable = true)
+ |-- Cat7: string (nullable = true)
+ |-- Cat8: string (nullable = true)
+ |-- Cat9: string (nullable = true)
+ |-- Cat10: string (nullable = true)
+ |-- Cat11: string (nullable = true)
+ |-- Cat12: string (nullable = true)
+ |-- OrdCat: string (nullable = true)
+ |-- Var1: double (nullable = true)
+ |-- Var2: double (nullable = true)
+ |-- Var3: double (nullable = true)
+ |-- Var4: double (nullable = true)
+ |-- Var5: double (nullable = true)
+ |-- Var6: double (nullable = true)
+ |-- Var7: double (nullable = true)
+ |-- Var8: double (nullable = true)
+ |-- NVCat: string (nullable = true)
+ |-- NVVar1: double (nullable = true)
+ |-- NVVar2: double (nullable = true)
+ |-- NVVar3: double (nullable = true)
+ |-- NVVar4: double (nullable = true)
+ |-- Claim_Amount: double (nullable = true)
+
+(13184290, 35)
+
+==========================PP================================
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel|Cat1|Cat2|Cat3|Cat4|Cat5|Cat6|Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1|Var2|Var3|Var4|Var5|Var6|Var7|Var8|NVCat|NVVar1|NVVar2|NVVar3|NVVar4|Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|     0|           0|      0|            0|         0|         0|          0|             0|   0|   0|   0|   0|   0|   0|   0|   0|   0|    0|    0|28882|     0|   0|   0|   0|   0|   0|   0|   0|   0|    0|     0|     0|     0|     0|           0|
++------+------------+-------+-------------+----------+----------+-----------+--------------+----+----+----+----+----+----+----+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|Row_ID|Household_ID|Vehicle|Calendar_Year|Model_Year|Blind_Make|Blind_Model|Blind_Submodel| Cat1|   Cat2|Cat3|   Cat4|   Cat5| Cat6|   Cat7|Cat8|Cat9|Cat10|Cat11|Cat12|OrdCat|Var1|Var2|Var3|Var4|Var5|Var6|Var7|Var8|NVCat|NVVar1|NVVar2|NVVar3|NVVar4|Claim_Amount|
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+|     0|           0|      0|            0|         0|      8431|       8431|          8431|25981|4874164|3999|5631649|5637321|25981|7167634|3364|   0| 3917|31469|28882|  7546|   0|   0|   0|   0|   0|   0|   0|   0|    0|     0|     0|     0|     0|           0|
++------+------------+-------+-------------+----------+----------+-----------+--------------+-----+-------+----+-------+-------+-----+-------+----+----+-----+-----+-----+------+----+----+----+----+----+----+----+----+-----+------+------+------+------+------------+
+
+root
+ |-- Calendar_Year: string (nullable = true)
+ |-- Model_Year: string (nullable = true)
+ |-- Cat3: string (nullable = true)
+ |-- Cat8: string (nullable = true)
+ |-- Cat9: string (nullable = true)
+ |-- Cat10: string (nullable = true)
+ |-- Var1: double (nullable = true)
+ |-- Var2: double (nullable = true)
+ |-- Var3: double (nullable = true)
+ |-- Var4: double (nullable = true)
+ |-- Var5: double (nullable = true)
+ |-- Var6: double (nullable = true)
+ |-- Var7: double (nullable = true)
+ |-- NVVar1: double (nullable = true)
+ |-- NVVar2: double (nullable = true)
+ |-- NVVar3: double (nullable = true)
+ |-- NVVar4: double (nullable = true)
+ |-- Claim_Amount: double (nullable = true)
+
+(13173031, 18)
+============================================================
+
+=============================LR=============================
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|Calendar_Year|Model_Year|Cat3|Cat8|Cat9|Cat10|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|claim|
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|2005         |1981      |C   |A   |B   |A    |-0.1114836|-1.5769622|-1.2862134|-1.6117902|-0.2935124|-0.7039712|0.3917136 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |-0.1114836|-1.5769622|-1.2862134|-1.6117902|-0.2935124|-0.7039712|0.3917136 |3.1977899 |-0.2661168|-0.2723372|3.068692  |0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |-0.0954137|-1.5423799|-2.0035639|-1.5779628|-0.2459352|-1.0899756|-0.1858042|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |A    |0.4429298 |-1.0755191|1.7451704 |-1.1212928|0.0633162 |-0.1857896|0.8709306 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1982      |C   |A   |B   |A    |-0.5855473|-0.9890633|1.1898023 |-1.0367243|-0.8049667|0.6926628 |1.3501475 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+only showing top 5 rows
+
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|Calendar_Year|Model_Year|Cat3|Cat8|Cat9|Cat10|Var1      |Var2      |Var3      |Var4      |Var5      |Var6      |Var7      |NVVar1    |NVVar2    |NVVar3    |NVVar4    |Claim_Amount|claim|
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+|2005         |1981      |C   |A   |B   |A    |-0.5212675|-1.7152913|-0.2448984|-1.6456175|0.3190434 |-0.7507596|-1.1933885|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1981      |C   |A   |B   |B    |0.386685  |-0.9890633|1.1898023 |-1.0367243|-0.1983581|-0.2150323|0.9077934 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|23.42057    |1.0  |
+|2005         |1982      |C   |A   |B   |A    |0.764329  |-0.9026076|0.7732763 |-0.9521559|1.7760936 |0.4177809 |-0.8739105|-0.2315299|-0.2661168|-0.2723372|-0.2514189|0.0         |0.0  |
+|2005         |1982      |C   |A   |B   |B    |0.4429298 |-0.7296962|1.7451704 |-0.5293134|0.0633162 |-0.1378315|0.8709306 |-0.2315299|-0.2661168|-0.2723372|-0.2514189|185.0761    |1.0  |
+|2005         |1983      |C   |A   |B   |A    |-0.2962881|-1.3348862|-1.7027395|-1.3749983|-0.7692839|-1.3379542|-0.4069812|-0.2315299|-0.2661168|-0.2723372|3.068692  |0.0         |0.0  |
++-------------+----------+----+----+----+-----+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+------------+-----+
+only showing top 5 rows
+
+Train Data non-zero claims percentage: 0.399746
+Train Data zero claims percentage: 0.600254
+Test Data non-zero claims percentage: 0.398842
+Test Data zero claims percentage: 0.601158
+21/04/29 19:13:06 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/29 19:13:06 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/04/29 19:13:07 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+21/04/29 19:13:07 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+Training time for Linear Regression: 2.768
+Mean square error = 75437.52559164097
+Mean absolute error = 115.4236847714715
+============================================================
+=============================TDM=============================
+Training time for Gradient Boost: 11.697
+Accuracy for GB classifier model = 0.615105 
+
+Training time for GLM - Gamma: 1.642
+Mean square error = 90008.0519674894
+Mean absolute error = 204.29187819212254
+============================================================
